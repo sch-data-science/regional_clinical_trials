@@ -43,11 +43,6 @@ ui <- fluidPage(
                        fluidRow(
                          column(2,
                                 
-                                # sliderInput("Age_input", "Select Participants' Age Range",
-                                #            min=min(trials$MINAGE,na.rm=TRUE),
-                                #            max=max(trials$MAXAGE,na.rm=TRUE),
-                                #            value=c(5,25)
-                                #),
                                 numericInput(
                                   "Age_input",
                                   "Enter Participant Age",
@@ -120,7 +115,7 @@ ui <- fluidPage(
                        ),
                        
                        
-                       # Create a new row for the table.
+                      
                        div(DT::DTOutput("table"), style = "font-size:80%")
               ),
               tabPanel("Read Me",
