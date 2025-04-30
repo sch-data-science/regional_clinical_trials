@@ -6,9 +6,7 @@ library(stringr)
 library(purrr)
 library(tidygeocoder)
 
-#andrewbcooper
 
-#Sys.setenv(MAPBOX_API_KEY="MAPBOX_API_KEY")
 
 ####. This section pulls the data from ClinicalTrials.gov 
 ####. and saves each page as a list within a list called 'data'
