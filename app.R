@@ -1,4 +1,4 @@
-#remotes::install_github("RcppCore/Rcpp")
+
 library(shiny)
 library(shinyWidgets)
 library(DT)
@@ -7,7 +7,7 @@ library(leaflet)
 library(stringr)
 library(ggplot2)
 library(dplyr)
-#https://tableau.childrens.sea.kids/#/views/AYAClinicalTrials/DRAFTMapVersion?:iid=4
+
 trials <- readRDS("trials.RDS")
 
 
@@ -37,7 +37,7 @@ ui <- fluidPage(
                      Data last refreshed ",
                      format(as.Date(trials$LATEST_REFRESH[1]),format = "%m/%d/%Y"),"</small>"))),windowTitle="AYA Oncology Clinical Trials"),
   
-  # Create a new Row in the UI for selectInputs
+  
   tabsetPanel(type="tabs",
               tabPanel("Main",
                        fluidRow(
@@ -229,7 +229,7 @@ server <- function(input, output,session) {
                                    AGE_RANGE,CONDITION)
     names(temp) <- c("Study ID", "Study Title","Study Site","Site Status","Phase","Study URL",
                      "Contact Name | Email | Phone",
-                     #"Principal Investigator", 
+                     
                      "Age Range","Condition(s)")
     temp
   }, escape = FALSE ,options = list(dom = 'ltp')
